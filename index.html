@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nadika Koshala</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+  	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://rendro.github.io/easy-pie-chart/javascripts/jquery.easy-pie-chart.js"></script>
+	<script src="https://kit.fontawesome.com/72de297a49.js" crossorigin="anonymous"></script>
+	
+	<script type="text/javascript">
+		$(function() {
+			$(".show-after-loading").css("display", "none")
+			setTimeout(showElements, 4500)
+
+			$(document).on("click","a",function(e){
+				e.preventDefault();
+				var id = $(this).attr("href"), topSpace = 30;
+					//alert(id);
+					$('html, body').animate({
+						scrollTop: $(id).offset().top - topSpace
+					}, 500);
+			});
+
+			$('.chart').easyPieChart({
+				scaleColor: "#979797",
+				lineWidth: 20,
+				lineCap: 'butt',
+				barColor: '#f9004d',
+				trackColor:	"#D5D8DC",
+				size: 160,
+				animate: 500
+			});
+
+			function emailMe() {
+				window.location.assign("mailto:mailto:nadikakpathirana@gmail.com");
+			}
+			
+		});
+
+		function showElements () {
+			$(".parent-loader-container").css("display", "none");
+			$(".show-after-loading").fadeIn(1000);
+		}
+
+	</script>
+</head>
+<body>
+
+	<div class='parent-loader-container'>
+		<div class='loader-container'>
+		  <div></div>
+		  <div></div>
+		  <div></div>
+		  <div></div>
+		  <div></div>
+		</div>
+	  </div>
+
+	<!--navbar-->
+	<nav>
+		<h2 class="" > <a href="#top" class="logo"> Portfo<span>lio</span></a>	</h2>
+		<ul>
+			<li><a href="#top">Home</a></li>
+			<li><a href="#about">About Us</a></li>
+			<li><a href="#skills">Skills</a></li>
+			<li><a href="#service">Services</a></li>
+			<li><a href="#contact-me">Contact Us</a></li>
+		</ul>
+	</nav>
+
+	<div id="top"></div>
+
+	<div class="home-background show-after-loading"></div>
+
+	<!--home-->
+	<div class="home show-after-loading" id="home">
+		<div class="content">
+			<h4>Hello, my name is</h4>
+			<h1>Nadika <span>Koshala</span></h1>
+			<h3>I'am a Web Developer.</h3>
+		</div>
+	</div>
+
+	<!--about-->
+	<section class="about show-after-loading" id="about">
+		<div class="main">
+			<img src="img/user.jpg">
+			<div class="about-text">
+				<h2>About Me</h2>
+				<h5>Developer <span>& Designer</span></h5>
+				<p> &emsp; &emsp; An undergraduate student at the University of Sri Jayewardenepura, passionate about learning the latest technologies and Making Creative Content always aspiring to find Creative solutions for problems of day-to-day life by utilizing the Experience.
+					<br> <br> &emsp; &emsp;
+					I working as a Full-stack web developer. I can provide clean code and perfect designs for You. I also make the website more & more interactive using web animations and new technologies. A responsive design makes your website accessible to all users, regardless of their device.</p>
+				<button type="button" onclick="emailMe();">Let's Talk</button>
+			</div>
+		</div>
+	</section>
+
+
+	
+
+	<!--skills-->
+	<div class="skills show-after-loading" id="skills">
+
+		<div class="skill-container">
+			<div class="title">
+				<h2>My Skills</h2>
+			</div>
+			<br>
+			<div class="skills-div">
+				<div class="chart" data-percent="70">Python</div>
+				<div class="chart" data-percent="40">Java</div>
+				<div class="chart" data-percent="40">C#</div>
+				<div class="chart" data-percent="40">javascript</div>
+				<br>
+				<div class="chart" data-percent="40">NodeJS</div>
+				<div class="chart" data-percent="40">AngularJS</div>
+				<div class="chart" data-percent="70">HTML</div>
+				<div class="chart" data-percent="70">CSS</div>
+			</div>
+		</div>
+	</div>
+
+	<!--services-->
+	<div class="service show-after-loading" id="service">
+		<div class="title">
+			<h2>My Services</h2>
+		</div>
+
+		<div class="box">
+			<div class="card">
+				<i class="fa-solid fa-palette"></i>
+				<h5>Web Designing</h5>
+				<div class="pra">
+					<p>I am designing amazingly interactive responsive website designs to increase your Business Presence or Start Selling Your Product Online etc.</p>
+				</div>
+			</div>
+
+			<div class="card">
+				<i class="fa-solid fa-blog"></i>
+				<h5>Web Development</h5>
+				<div class="pra">
+					<p>I am a developer with an experience of 2 years in the field of web development. I am working on Various kinds of Technology Like Django, Php, React, Node.</p>
+				</div>
+			</div>
+
+			<div class="card">
+				<i class="fa-solid fa-server"></i>
+				<h5>Hosting and Maintenance</h5>
+				<div class="pra">
+					<p>I offer industry-leading support services to keep your site fully operational and healthy.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--contact me-->
+	<div class="contact-me show-after-loading" id="contact-me">
+		<p>Let Me Get You A Beautiful Website.</p>
+		<a class="button-two" href="mailto:nadikakpathirana@gmail.com">Hire Me</a>
+	</div>
+
+	<!--footer-->
+	<footer class="show-after-loading">
+		<p>Nadika Koshala</p>
+		<div class="social">
+			<a href="https://www.facebook.com/nadikakpathirana/"><i class="fa-brands fa-facebook-f fb"></i></a>
+			<a href="https://www.instagram.com/nadika_kosala/"><i class="fa-brands fa-instagram insta"></i></i></a>
+			<a href="https://www.linkedin.com/in/nadika-k-pathirana-86a036196/"><i class="fa-brands fa-linkedin linkedin"></i></i></a>
+		</div>
+		<p class="end"> Created by Nadika Koshala &copy; 2022</p>
+	</footer>
+</body>
+</html>
